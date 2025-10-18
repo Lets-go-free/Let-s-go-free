@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vielen Dank! - Let's go free</title>
+    <title>Let's go free - mit DeFi und Krypto</title>
     <style>
         * {
             margin: 0;
@@ -18,106 +18,265 @@
             background: linear-gradient(135deg, #8B7355 0%, #A0826D 50%, #C9A882 100%);
             min-height: 100vh;
             padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
         .container {
-            max-width: 600px;
+            max-width: 800px;
+            margin: 0 auto;
             background: white;
             border-radius: 20px;
-            padding: 60px 40px;
+            padding: 50px 40px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            text-align: center;
-        }
-        
-        .checkmark {
-            width: 80px;
-            height: 80px;
-            background: #8B7355;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 30px;
-        }
-        
-        .checkmark svg {
-            width: 50px;
-            height: 50px;
-            fill: white;
         }
         
         h1 {
             font-size: 2.5em;
             color: #8B7355;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            line-height: 1.2;
         }
         
-        p {
+        .intro {
             font-size: 1.2em;
             color: #555;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        .story {
+            margin-bottom: 50px;
+        }
+        
+        .story p {
             margin-bottom: 20px;
-            line-height: 1.6;
+            font-size: 1.1em;
         }
         
         .highlight {
             background: #F5E6D3;
-            padding: 25px;
+            padding: 30px;
             border-radius: 10px;
             margin: 30px 0;
             border-left: 4px solid #A0826D;
         }
         
-        .back-btn {
-            display: inline-block;
+        .profile-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 15px;
+            margin: 40px auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .downloads {
+            margin-top: 50px;
+        }
+        
+        .downloads h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        
+        .pdf-item {
+            background: #f9fafb;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .pdf-item:hover {
+            background: #F5E6D3;
+            border-color: #A0826D;
+            transform: translateX(5px);
+        }
+        
+        .pdf-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .download-btn {
             background: #8B7355;
             color: white;
-            padding: 15px 40px;
+            padding: 10px 25px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1em;
-            margin-top: 30px;
             transition: all 0.3s;
         }
         
-        .back-btn:hover {
+        .download-btn:hover {
             background: #6B5745;
-            transform: translateY(-2px);
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #777;
+        }
+        
+        .social-links {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #8B7355;
+            border-radius: 50%;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background: #6B5745;
+            transform: translateY(-5px);
+        }
+        
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
         }
         
         @media (max-width: 600px) {
             .container {
-                padding: 40px 25px;
+                padding: 30px 25px;
             }
             
             h1 {
                 font-size: 1.8em;
+            }
+            
+            .pdf-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .download-btn {
+                width: 100%;
+                text-align: center;
+                display: block;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="checkmark">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-            </svg>
+        <h1>Let's go free<br>Freiheit mit DeFi und Krypto</h1>
+        
+        <p class="intro">Von der Erschöpfung zur Selbstbestimmung - meine Reise in die dezentralen Finanzen</p>
+        
+        <div class="highlight" style="margin-bottom: 40px;">
+            <p><strong>Schön, dass du hier bist!</strong></p>
+            <p>Vielleicht steckst du gerade selbst im Hamsterrad. Vielleicht suchst du nach Alternativen zum klassischen Finanzsystem. Oder du bist einfach neugierig, was es mit DeFi auf sich hat. Egal, was dich hierhergeführt hat - du bist richtig hier.</p>
         </div>
         
-        <h1>Vielen Dank!</h1>
+        <img src="profil.jpg" alt="Chris - Dein Begleiter in die DeFi-Welt" class="profile-image">
         
-        <p>Deine Nachricht ist bei mir angekommen. 🚀</p>
-        
-        <div class="highlight">
-            <p style="margin: 0;"><strong>Ich melde mich in Kürze bei dir</strong> und beantworte gerne alle deine Fragen rund um DeFi und finanzielle Freiheit.</p>
+        <div class="story">
+            <p>Jahrelang habe ich als Applikationsmanager gearbeitet. Ein sicherer Job, gutes Gehalt - aber vor zwei Jahren stand ich kurz vor dem Burnout. Das Hamsterrad drehte sich immer schneller, und ich mit ihm.</p>
+            
+            <p>Dann kam der Wendepunkt: Meine Frau stiess über eine gute Freundin auf DeFi - dezentrale Finanzen. Ich war zunächst skeptisch, aber neugierig. Als ich anfing, mich damit zu beschäftigen, sah ich plötzlich eine Möglichkeit: einen Weg raus aus dem Hamsterrad.</p>
+            
+            <div class="highlight">
+                <p><strong>Wenige Monate später habe ich meinen sicheren Job gekündigt.</strong></p>
+                <p>Ich habe mich intensiv in DeFi eingearbeitet - aber Achtung: ohne zu traden! Es geht nicht um Zockerei, sondern um <strong>Vermögensaufbau und -sicherung</strong> sowie um den Aufbau von passivem Einkommen durch dezentrale Systeme.</p>
+            </div>
+            
+            <p>Seitdem hat sich mein Leben massiv verändert. Ich bestimme und verwalte mein Geld selbst - ohne Banken, ohne Mittelsmänner. Ich arbeite wann und wo ich möchte. Kein Chef sagt mir, wann ich in den Urlaub kann. Ich habe Zeit für das, was wirklich zählt.</p>
+            
+            <p>Ist alles immer einfach? Natürlich nicht, es gibt immer noch Herausforderungen. Aber ich bereue den Schritt keinesfalls. Würde ich es wieder machen? Sofort - vielleicht mit leichten Anpassungen, aber definitiv.</p>
+            
+            <p><strong>Heute begleite ich Menschen Schritt für Schritt in die dezentralen Finanzen. Von A bis Z - und darüber hinaus.</strong> Mit Geduld und Vertrauen. Weil ich weiss, wie es sich anfühlt, am Anfang zu stehen und überfordert zu sein.</p>
+            
+            <p>Ich zeige dir sehr gerne, welchen Systemen ich vertraue, wie sie funktionieren, was der Hintergrund ist und wie auch du davon profitieren kannst.</p>
+            
+            <p>Mir ist wichtig, dass die Begleitung nicht nach der ersten Investition endet. Ich bleibe an deiner Seite: beim Austausch über Erfahrungen, beim Auszahlen auf dein Bankkonto oder auf die Krypto-Debitkarte, beim Entdecken weiterer Möglichkeiten.</p>
+            <p>Wir gehen diesen Weg gemeinsam - in deinem Rhythmus, ohne Druck. <br>Ich freue mich auf dich.</p>
         </div>
         
-        <p>Bis bald!<br>Chris</p>
+        <div class="downloads">
+            <h2>Deine ersten Schritte - kostenlos</h2>
+            <p style="margin-bottom: 25px;">Damit du sicher starten kannst, bekommst du von mir zwei wichtige Werkzeuge:</p>
+            
+            <div class="pdf-item">
+                <span class="pdf-title">📋 Checkliste für Wallet-Eröffnung</span>
+                <a href="pdfs/checkliste-wallet.pdf" class="download-btn" download>Download</a>
+            </div>
+            
+            <div class="pdf-item">
+                <span class="pdf-title">🔐 Sicherungs-Blatt für Seedphrase</span>
+                <a href="pdfs/sicherung-seedphrase.pdf" class="download-btn" download>Download</a>
+            </div>
+        </div>
+
+        <!-- ✉️ Kontaktformular START -->
+        <div class="contact-section" style="margin-top: 80px;">
+            <h2 style="font-size: 1.8em; color: #333; margin-bottom: 25px;">Kontakt aufnehmen</h2>
+            <p style="margin-bottom: 30px; color: #555;">
+                Hast du Fragen oder möchtest du mehr über DeFi erfahren? Schreib mir einfach eine Nachricht – ich melde mich gerne bei dir.
+            </p>
+
+            <form action="https://formspree.io/f/xqaynybo" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                <input type="text" name="name" placeholder="Dein Name" required
+                    style="padding: 12px 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 1em;">
+                
+                <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required
+                    style="padding: 12px 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 1em;">
+
+                <textarea name="message" placeholder="Deine Nachricht" rows="5" required
+                    style="padding: 12px 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 1em;"></textarea>
+                
+                <button type="submit"
+                    style="background: #8B7355; color: white; padding: 12px 25px; border: none; border-radius: 8px; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: all 0.3s;">
+                    Nachricht senden
+                </button>
+            </form>
+        </div>
+        <!-- ✉️ Kontaktformular ENDE -->
+
         
-        <a href="index.html" class="back-btn">Zurück zur Startseite</a>
+        <div class="footer">
+            <p>Finanzielle Freiheit beginnt mit dem ersten Schritt.<br>Let's go free! 🚀</p>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/chris.freiheit/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100008222589751" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: #fff3cd; border-radius: 10px; border-left: 4px solid #ffc107; text-align: left; font-size: 0.95em;">
+                <p><strong>⚠️ Wichtiger Hinweis:</strong></p>
+                <p style="margin-top: 10px;">Die Inhalte auf dieser Seite stellen keine Finanzberatung dar. Ich teile lediglich meine persönlichen Erfahrungen und begleite dich beim Erlernen dezentraler Finanzsysteme. Alle Investitionsentscheidungen triffst du eigenverantwortlich. Informiere dich umfassend und investiere nur, was du bereit bist zu verlieren.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
