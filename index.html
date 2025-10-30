@@ -132,6 +132,90 @@
             font-size: 1.15em;
         }
         
+        /* NEU: Kursangebot Styles */
+        .offer-section {
+            background: linear-gradient(135deg, #F5E6D3 0%, #E8D4BA 100%);
+            padding: 60px 40px;
+        }
+        
+        .offer-section h2 {
+            text-align: center;
+            font-size: 2.3em;
+            margin-bottom: 15px;
+        }
+        
+        .offer-tagline {
+            text-align: center;
+            font-size: 1.3em;
+            color: #6B5745;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        .sessions-container {
+            max-width: 750px;
+            margin: 40px auto;
+        }
+        
+        .session-card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            border-left: 5px solid #8B7355;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .session-card h3 {
+            color: #8B7355;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        
+        .session-card ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .session-card li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .price-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 600px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+        
+        .price-box .price {
+            font-size: 3em;
+            color: #8B7355;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .price-box .price-note {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .included-list {
+            text-align: left;
+            margin: 25px auto;
+            max-width: 450px;
+        }
+        
+        .included-list li {
+            margin-bottom: 12px;
+            padding-left: 10px;
+        }
+        
         .call-section {
             background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);
             color: white;
@@ -259,6 +343,10 @@
             .problems-grid, .solutions-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .price-box .price {
+                font-size: 2.5em;
+            }
         }
     </style>
 </head>
@@ -269,7 +357,7 @@
             <h1>Let's go free<br>Freiheit mit DeFi und Krypto</h1>
             <p class="subtitle">Raus aus dem Hamsterrad, rein in die finanzielle Selbstbestimmung</p>
             <img src="profil.jpg" alt="Chris - Dein Begleiter in die DeFi-Welt" class="profile-image">
-            <a href="#call" class="cta-button">Jetzt kostenloses Erstgespräch buchen</a>
+            <a href="#angebot" class="cta-button">Zum 1:1 Begleitungs-Programm</a>
         </div>
         
         <!-- DEINE GESCHICHTE -->
@@ -304,11 +392,6 @@
                 </div>
                 
                 <div class="card">
-                    <h3>⏰ Hamsterrad</h3>
-                    <p>Du tauschst Zeit gegen Geld, aber kommst nie wirklich vorwärts. Keine echte finanzielle Freiheit.</p>
-                </div>
-                
-                <div class="card">
                     <h3>🔒 Systemabhängigkeit</h3>
                     <p>Du bist komplett vom klassischen Finanzsystem abhängig – ohne Alternative.</p>
                 </div>
@@ -327,23 +410,9 @@
                 </div>
                 
                 <div class="card">
-                    <h3>✅ Passives Einkommen</h3>
-                    <p>Dein Geld arbeitet für dich – durch dezentrale Systeme, nicht durch Zockerei oder Trading.</p>
-                </div>
-                
-                <div class="card">
                     <h3>✅ Vermögensaufbau</h3>
                     <p>Echte Möglichkeiten für Vermögensaufbau und -sicherung, unabhängig vom klassischen System.</p>
                 </div>
-                
-                <div class="card">
-                    <h3>✅ Zeitfreiheit</h3>
-                    <p>Raus aus dem Hamsterrad. Arbeite wann und wo du möchtest. Lebe selbstbestimmt.</p>
-                </div>
-            </div>
-            
-            <div class="highlight-box" style="margin-top: 40px;">
-                <p><strong>Wichtig:</strong> Es geht nicht um Trading oder Zockerei, sondern um <strong>Vermögensaufbau und -sicherung</strong> durch systematischen Aufbau von passivem Einkommen.</p>
             </div>
         </div>
         
@@ -360,6 +429,101 @@
             
             <p><strong>Wir gehen diesen Weg gemeinsam – in deinem Rhythmus, ohne Druck.</strong></p>
         </div>
+
+        <!-- KURSANGEBOT -->
+        <div class="offer-section" id="angebot">
+            <h2>Dein Weg in die Krypto-Welt</h2>
+            <p class="offer-tagline">Persönliche 1:1-Begleitung – von den ersten Schritten bis zur selbstständigen Nutzung</p>
+            
+            <div class="sessions-container">
+                <div class="session-card">
+                    <h3>Session 1: Das Fundament verstehen</h3>
+                    <p>Wir schaffen gemeinsam die Basis, damit du weisst, womit du arbeitest:</p>
+                    <ul>
+                        <li>Was ist Krypto und wie funktioniert Blockchain?</li>
+                        <li>Unterschied zu klassischem Geld (Fiat)</li>
+                        <li>Warum gibt es verschiedene Blockchains?</li>
+                        <li>Was sind dezentrale Börsen und warum Gebühren?</li>
+                        <li>Unterschied zwischen Coin und Token</li>
+                        <li>Wo holst Du Dir die wichtigsten Informationen</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 2: Dein Wallet einrichten (Das Herzstück!)</h3>
+                    <p>Hier wird es praktisch – wir richten gemeinsam dein erstes Wallet ein:</p>
+                    <ul>
+                        <li>Was ist ein Wallet und warum brauchst du es?</li>
+                        <li>Unterschied zwischen Hot und Cold Wallet</li>
+                        <li>Gemeinsam ein Wallet eröffnen – Schritt für Schritt</li>
+                        <li>Sicherheit: Meine bewährte Checkliste durchgehen</li>
+                        <li>Backup richtig machen – damit nichts schief geht</li>
+                        <li>Wie erkennst Du Phishing/Scams?</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 3: Dein erster Krypto-Kauf</h3>
+                    <p>Jetzt geht's los – wir kaufen gemeinsam deine ersten Kryptos:</p>
+                    <ul>
+                        <li>Verschiedene Kaufmöglichkeiten kennenlernen</li>
+                        <li>Gemeinsam den ersten Kauf durchführen</li>
+                        <li>Tokens empfangen und senden</li>
+                        <li>Token tauschen und zwischen Blockchains wechseln (Bridging)</li>
+                        <li>Sicherheitsaspekte verstehen</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 4: Sicherheit mit Cold Wallet</h3>
+                    <p>Deine Kryptos langfristig und sicher aufbewahren:</p>
+                    <ul>
+                        <li>Verstehen, warum Cold Wallets wichtig sind</li>
+                        <li>Wann nutze ich was? Hot vs. Cold im Alltag</li>
+                        <li>Optional:</li>
+                        <li>  Cold Wallet einrichten</li>
+                        <li>  Tokens von Hot zur Cold Wallet verschieben</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 5: Krypto im echten Leben nutzen</h3>
+                    <p>Von der Theorie in die Praxis – Krypto im Alltag einsetzen:</p>
+                    <ul>
+                        <li>Wie kannst Du Krypto im Alltag nutzen?</li>
+                        <li>Krypto zurück auf dein Bankkonto übertragen</li>
+                        <li>Einblick in Web3</li>
+                        <li>Was sind Smart Contracts?</li>
+                        <li>Deine offenen Fragen und individuelle Themen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="price-box">
+                <p style="font-size: 1.2em; color: #666; margin-bottom: 10px;">Launch-Angebot: 1:1 DeFi Coaching</p>
+                <div class="price">CHF 777.–</div>
+                <p class="price-note">5 persönliche Sessions à ca 90 Minuten<br>über 2-4 Wochen verteilt, flexibel nach deinem Tempo</p>
+                
+                <div class="included-list">
+                    <p style="font-weight: 600; margin-bottom: 15px; color: #8B7355;">✓ Im Preis enthalten:</p>
+                    <ul style="list-style: none;">
+                        <li>✓ Individuelle 1:1-Begleitung per Video-Call</li>
+                        <li>✓ Screen-Sharing für gemeinsames Einrichten</li>
+                        <li>✓ Meine Sicherheits-Checkliste</li>
+                        <li>✓ Zugang zu meinen bewährten Tools & Plattformen</li>
+                        <li>✓ Support auch zwischen den Sessions</li>
+                        <li>✓ Kein Zeitdruck – wir gehen in deinem Rhythmus</li>
+                    </ul>
+                </div>
+                
+                <p style="margin-top: 25px; font-size: 1em; color: #666;">Optional: Einzelne Folge-Sessions à CHF 120.–</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#call" class="cta-button">Jetzt Erstgespräch buchen</a>
+                <p style="margin-top: 15px; color: #666; font-size: 0.95em;">Das Erstgespräch ist kostenlos und unverbindlich</p>
+            </div>
+        </div>
         
         <!-- CALL TO ACTION -->
         <div class="call-section" id="call">
@@ -370,8 +534,9 @@
                 <input type="text" name="name" placeholder="Dein Name" required>
                 <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
                 <input type="tel" name="phone" placeholder="Deine Telefonnummer (optional)">
-                <textarea name="message" rows="4" placeholder="Was möchtest du erreichen? Wo stehst du gerade?" required></textarea>
-                <button type="submit" id="submitBtn">Jetzt Erstgespräch anfragen</button>
+                <textarea name="message" rows="4" placeholder="Erzähl mir kurz: Was möchtest du erreichen? Wo stehst du gerade mit Krypto? Hast du bereits erste Erfahrungen?" required></textarea>
+                <input type="hidden" name="_subject" value="Neue Anfrage: 1:1 Begleitung Krypto/DeFi">
+                <button type="submit" id="submitBtn">Jetzt kostenloses Erstgespräch anfragen</button>
             </form>
         </div>
         
