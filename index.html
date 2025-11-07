@@ -49,8 +49,8 @@
         }
         
         .profile-image {
-            width: 200px;
-            height: 200px;
+            width: 270px;
+            height: 270px;
             border-radius: 50%;
             margin: 30px auto;
             display: block;
@@ -79,11 +79,12 @@
         }
         
         .section {
-            padding: 60px 40px;
+            padding: 40px 40px;
         }
         
         .section h2 {
             font-size: 2em;
+            line-height: 1.2em;
             color: #8B7355;
             margin-bottom: 30px;
         }
@@ -94,11 +95,17 @@
             line-height: 1.8;
         }
         
+        .section pbox {
+            font-size: 1.em;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
         .problems-grid, .solutions-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
         
         .card {
@@ -114,11 +121,22 @@
             font-size: 1.2em;
         }
         
+        .card h4 {
+            color: #8B7355;
+            margin-bottom: 10px;
+            font-size: 1.0em;
+        }
+        
         .card p {
             font-size: 1em;
             margin: 0;
         }
-        
+
+                .card pbox {
+            font-size: 1em;
+            margin: 0;
+        }
+
         .highlight-box {
             background: #F5E6D3;
             padding: 35px;
@@ -130,6 +148,97 @@
         .highlight-box strong {
             color: #8B7355;
             font-size: 1.15em;
+        }
+        
+        /* NEU: Kursangebot Styles */
+        .offer-section {
+            background: linear-gradient(135deg, #F5E6D3 0%, #E8D4BA 100%);
+            padding: 60px 40px;
+        }
+        
+        .offer-section h2 {
+            text-align: center;
+            font-size: 2.3em;
+            margin-bottom: 15px;
+        }
+        
+        .offer-tagline {
+            text-align: center;
+            font-size: 1.3em;
+            color: #6B5745;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        .sessions-container {
+            max-width: 750px;
+            margin: 40px auto;
+        }
+        
+        .session-card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            border-left: 5px solid #8B7355;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .session-card h3 {
+            color: #8B7355;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        
+        .session-card h4 {
+            color: #8B7355;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .session-card ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .session-card li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .price-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 600px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+        
+        .price-box .price {
+            font-size: 3em;
+            line-height: 1.2em;
+            color: #8B7355;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .price-box .price-note {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .included-list {
+            text-align: left;
+            margin: 25px auto;
+            max-width: 450px;
+        }
+        
+        .included-list li {
+            margin-bottom: 12px;
+            padding-left: 10px;
         }
         
         .call-section {
@@ -259,6 +368,10 @@
             .problems-grid, .solutions-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .price-box .price {
+                font-size: 2.5em;
+            }
         }
     </style>
 </head>
@@ -267,117 +380,212 @@
         <!-- HERO SECTION -->
         <div class="hero">
             <h1>Let's go free<br>Freiheit mit DeFi und Krypto</h1>
-            <p class="subtitle">Raus aus dem Hamsterrad, rein in die finanzielle Selbstbestimmung</p>
+            <p class="subtitle">Dein Weg in die finanzielle Selbstbestimmung</p>
             <img src="profil.jpg" alt="Chris - Dein Begleiter in die DeFi-Welt" class="profile-image">
-            <a href="#call" class="cta-button">Jetzt kostenloses Erstgespräch buchen</a>
+            <a href="#angebot" class="cta-button">Zum 1:1 Begleitungs-Programm</a>
         </div>
         
         <!-- DEINE GESCHICHTE -->
         <div class="section">
-            <h2>Meine Geschichte: Vom Burnout zur Freiheit</h2>
-            <p>Jahrelang arbeitete ich als Applikationsmanager. Sicherer Job, gutes Gehalt – aber im Jahre 2023 stand ich kurz vor dem Burnout. Das Hamsterrad drehte sich immer schneller.</p>
+            <h2>Meine Geschichte</h2>
             
-            <p>Dann kam der Wendepunkt: Meine Frau stiess über eine gute Freundin auf DeFi – dezentrale Finanzen. Ich war skeptisch, aber neugierig. Als ich mich damit beschäftigte, sah ich plötzlich einen Ausweg.</p>
-            
-            <div class="highlight-box">
-                <p><strong>Wenige Monate später kündigte ich meinen sicheren Job.</strong></p>
-                <p style="margin-top: 15px;">Heute, nach 2 Jahren in DeFi: Ich bestimme und verwalte mein Geld selbst. Ich arbeite wann und wo ich möchte. Kein Chef sagt mir, wann ich Urlaub nehmen kann. Ich habe Zeit für das, was wirklich zählt.</p>
-            </div>
-            
-            <p>Ist alles immer einfach? Natürlich nicht, es gibt immer noch Herausforderungen. Aber ich bereue den Schritt keinesfalls. Würde ich es wieder machen? Sofort - vielleicht mit leichten Anpassungen, aber definitiv.</p>
-        </div>
-        
-        <!-- DIE PROBLEME -->
-        <div class="section" style="background: #f9f9f9;">
-            <h2>Das Problem mit dem klassischen System</h2>
-            <p>Kommt dir das bekannt vor?</p>
-            
-            <div class="problems-grid">
-                <div class="card">
-                    <h3>🏦 Fremdbestimmung</h3>
-                    <p>Banken kontrollieren dein Geld. Du bist abhängig von deren Öffnungszeiten, Gebühren und Regeln.</p>
-                </div>
+            <p>Hallo, schön, dass du hier bist.<br>Vielleicht suchst du – so wie ich damals – nach einem Weg, mehr Freiheit, Selbstbestimmung und Unabhängigkeit in dein Leben zu bringen.</p>
+            <p>Ich bin Chris, Jahrgang 1973, und habe über 25 Jahre als Applikationsmanager gearbeitet. Im Sommer 2023 stand ich an einem Punkt, an dem ich spürte: So kann es nicht weitergehen. Das Hamsterrad drehte sich immer schneller – sicherer Job, gutes Gehalt, aber keine echte Freiheit. Mir fehlte das Gefühl, mein Leben wirklich selbst zu gestalten.</p>
+
+            <p>Dann wurde meine Frau durch eine gute Freundin auf das Thema Krypto aufmerksam - und somit traten Krypto und dezentrale Finanzen auch in mein Leben. Anfangs war ich sehr skeptisch – das klang nach etwas für Nerds und Insider. Doch je mehr ich mich damit beschäftigte, desto klarer wurde mir: Hier steckt eine echte Chance. Eine Chance, das Finanzsystem zu verstehen, Kontrolle zurückzugewinnen und die eigene Zukunft selbst in die Hand zu nehmen.</p>
+
+            <!-- DIE PROBLEME -->
+            <div class="section" style="background: #ededed;">
+                <h3>Das Problem mit dem klassischen System</h3>
+                <pbox>Kommt dir das bekannt vor?</pbox>
                 
-                <div class="card">
-                    <h3>📉 Vermögensverlust</h3>
-                    <p>Niedrig- oder Negativzinsen. Dein Geld verliert durch Inflation kontinuierlich an Wert.</p>
-                </div>
+                <div class="problems-grid">
+                    <div class="card">
+                        <h4>🏦 Fremdbestimmung</h4>
+                        <pbox>Du hast zwar Geld auf der Bank, aber keine Kontrolle darüber, was damit passiert. Gebühren, Sperren, Öffnungszeiten, willkürliche Regeln – andere entscheiden, was du darfst.</pbox>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>💸 Inflation und Geldentwertung</h4>
+                        <pbox>Dein Geld verliert jedes Jahr an Kaufkraft. Sparen auf dem Konto fühlt sich sicher an, ist es aber nicht.</pbox>
+                    </div>
+    
+                    <div class="card">
+                        <h4>⏳ Langsame und teure Prozesse</h4>
+                        <pbox>Überweisungen dauern oft Tage, Auslands-Transaktionen kosten extra und Zwischenstellen kassieren mit.</pbox>
+                    </div>
                 
-                <div class="card">
-                    <h3>⏰ Hamsterrad</h3>
-                    <p>Du tauschst Zeit gegen Geld, aber kommst nie wirklich vorwärts. Keine echte finanzielle Freiheit.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>🔒 Systemabhängigkeit</h3>
-                    <p>Du bist komplett vom klassischen Finanzsystem abhängig – ohne Alternative.</p>
                 </div>
             </div>
-        </div>
-        
+
+
         <!-- DIE LÖSUNG -->
-        <div class="section">
-            <h2>Die Lösung: DeFi & Selbstbestimmung</h2>
-            <p>Dezentrale Finanzen bieten dir eine echte Alternative:</p>
+        <div class="section" style="background: #f2f2f2;">
+            <h3>Die Lösung: DeFi & Selbstbestimmung</h3>
+            <pbox>Dezentrale Finanzen bieten dir eine echte Alternative:</pbox>
             
             <div class="solutions-grid">
                 <div class="card">
-                    <h3>✅ Deine Bank, deine Regeln</h3>
-                    <p>Du kontrollierst dein Geld. Keine Mittelsmänner, keine Banken. 24/7 Zugriff, weltweit.</p>
+                    <h4>✅ Deine Bank, deine Regeln</h4>
+                    <pbox>Kontrolle statt Abhängigkeit: In DeFi verwaltest du dein Geld selbst. Du bist dein eigener Finanzverwalter – unabhängig von Banken oder Öffnungszeiten.</pbox>
                 </div>
                 
                 <div class="card">
-                    <h3>✅ Passives Einkommen</h3>
-                    <p>Dein Geld arbeitet für dich – durch dezentrale Systeme, nicht durch Zockerei oder Trading.</p>
+                    <h4>✅ Werte statt Verlust</h4>
+                    <pbox>In DeFi kannst du dein Geld gezielt einsetzen, um es zu erhalten oder zu vermehren – ohne dass es durch Inflation ständig weniger wert wird.</pbox>
                 </div>
-                
+
                 <div class="card">
-                    <h3>✅ Vermögensaufbau</h3>
-                    <p>Echte Möglichkeiten für Vermögensaufbau und -sicherung, unabhängig vom klassischen System.</p>
+                    <h4>✅ Schnell und direkt</h4>
+                    <pbox>DeFi funktioniert rund um die Uhr – Transaktionen sind in Minuten erledigt, ohne Umwege oder Zusatzgebühren.</pbox>
                 </div>
-                
-                <div class="card">
-                    <h3>✅ Zeitfreiheit</h3>
-                    <p>Raus aus dem Hamsterrad. Arbeite wann und wo du möchtest. Lebe selbstbestimmt.</p>
-                </div>
-            </div>
-            
-            <div class="highlight-box" style="margin-top: 40px;">
-                <p><strong>Wichtig:</strong> Es geht nicht um Trading oder Zockerei, sondern um <strong>Vermögensaufbau und -sicherung</strong> durch systematischen Aufbau von passivem Einkommen.</p>
+
             </div>
         </div>
+
+            
+            <p>Ich begann Schritt für Schritt – öffnete mein erstes Wallet, lernte, wie man Fiat in Krypto tauscht, swappt, bridged und auch wieder zurück in Fiat wechselt. Ich machte Fehler, lernte daraus und baute mir Wissen auf, das nicht nur theoretisch, sondern praxisnah und sicher funktioniert – inklusive Cold Wallet und Risikomanagement.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Und genau deshalb habe ich mein 1:1-Coaching entwickelt</strong></p>
+                <p style="margin-top: 15px;">Ich begleite dich persönlich und Schritt für Schritt in die Krypto-Welt – von den Grundlagen bis zur sicheren Anwendung in der Praxis.<br>Statt endloser Videos bekommst du klare Antworten, echte Erfahrung und individuelle Unterstützung von A bis Z – damit du Krypto wirklich verstehst und selbstbewusst handeln kannst. Wir gehen gemeinsam deinen Weg, Schritt für Schritt, in deinem Tempo. Keine Hektik, kein Druck – du bestimmst das Tempo, ich begleite dich.</p>
+                <p style="margin-top: 15px;">Ich zeige dir praxisnah, wie du dein Geld sicher von der Bank auf die Blockchain bringst, wie du Risiken erkennst und wie du DeFi wirklich verstehst, statt nur nachzumachen. Dabei ist mir wichtig, dass du dich sicher fühlst und Vertrauen in jeden Schritt hast.</p>
+                <p style="margin-top: 15px;">Mein Ziel ist, dass du am Ende selbstbewusst und selbstbestimmt mit deinem Geld umgehst – mit einem klaren Verständnis, echten Ergebnissen und dem guten Gefühl, die Kontrolle wieder in der eigenen Hand zu haben.</p>
+                <p style="margin-top: 15px;"><strong>Wir gehen diesen Weg gemeinsam – in deinem Rhythmus, ohne Druck.</strong></p>
+            </div>
+            
+        </div>
         
-        <!-- WIE ICH DIR HELFE -->
-        <div class="section" style="background: #f9f9f9;">
-            <h2>Wie ich dir helfe</h2>
+       
+<!-- WIE ICH DIR HELFE 
+        <div class="section" style="background: #f9f9f9;" id="angebot">
+            <h2>Dein leichter Einstieg in die Krypto-Welt -<br>so begleite ich Dich</h2>
             <p><strong>Ich begleite dich Schritt für Schritt in die dezentralen Finanzen – von A bis Z und darüber hinaus.</strong></p>
             
-            <p>Mit Geduld und Vertrauen. Weil ich weiss, wie es sich anfühlt, am Anfang zu stehen und überfordert zu sein.</p>
+            <p>Ich weiss, wie unsicher und überfordernd der Einstieg in die Welt von Krypto und DeFi wirken kann. Genau so ging es mir am Anfang auch. Überall findest du Videos, Begriffe und Meinungen – aber kaum jemanden, der dich persönlich begleitet und dir die Dinge <strong>einfach und verständlich</strong> erklärt.</p>
             
-            <p>Ich zeige dir, welchen Systemen ich vertraue, wie sie funktionieren, was der Hintergrund ist und wie auch du davon profitieren kannst.</p>
+            <p>Deshalb habe ich mein 1:1-Coaching entwickelt. Wir gehen gemeinsam deinen Weg, Schritt für Schritt, in deinem Tempo. Keine Hektik, kein Druck – du bestimmst das Tempo, ich begleite dich.</p>
             
-            <p>Die Begleitung endet nicht nach der ersten Investition. Ich bleibe an deiner Seite: beim Austausch über Erfahrungen, beim Auszahlen auf dein Bankkonto oder die Krypto-Debitkarte, beim Entdecken weiterer Möglichkeiten.</p>
+            <p>Ich zeige dir praxisnah, wie du dein Geld sicher von der Bank auf die Blockchain bringst, wie du Risiken erkennst und wie du DeFi wirklich verstehst, statt nur nachzumachen. Dabei ist mir wichtig, dass du dich sicher fühlst und Vertrauen in jeden Schritt hast.</p>
+
+            <p>Mein Ziel ist, dass du am Ende selbstbewusst und selbstbestimmt mit deinem Geld umgehst – mit einem klaren Verständnis, echten Ergebnissen und dem guten Gefühl, die Kontrolle wieder in der eigenen Hand zu haben.</p>
             
             <p><strong>Wir gehen diesen Weg gemeinsam – in deinem Rhythmus, ohne Druck.</strong></p>
+        </div>
+-->
+        <!-- KURSANGEBOT -->
+        <div class="offer-section" id="angebot">
+            <h2>Persönliche 1:1-Begleitung in 5 Sessions</h2>
+            <p class="offer-tagline">Von den ersten Schritten bis zur selbstständigen Nutzung<br>Ich begleite dich Schritt für Schritt in die dezentralen Finanzen –<br>von A bis Z und darüber hinaus.</p>
+            <div class="sessions-container">
+                <div class="session-card">
+                    <h3>Session 1: Das Fundament verstehen</h3>
+                    <p>Wir schaffen gemeinsam die Basis, damit du weisst, womit du arbeitest:</p>
+                    <ul>
+                        <li>Was ist Krypto und wie funktioniert Blockchain?</li>
+                        <li>Unterschied zu klassischem Geld (Fiat)</li>
+                        <li>Warum gibt es verschiedene Blockchains?</li>
+                        <li>Was sind dezentrale Börsen und warum Gebühren?</li>
+                        <li>Unterschied zwischen Coin und Token</li>
+                        <li>Wo holst Du Dir die wichtigsten Informationen</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 2: Dein Wallet einrichten (Das Herzstück!)</h3>
+                    <p>Hier wird es praktisch – wir richten gemeinsam dein erstes Wallet ein:</p>
+                    <ul>
+                        <li>Was ist ein Wallet und warum brauchst du es?</li>
+                        <li>Unterschied zwischen Hot und Cold Wallet</li>
+                        <li>Gemeinsam ein Wallet eröffnen – Schritt für Schritt</li>
+                        <li>Sicherheit: Meine bewährte Checkliste durchgehen</li>
+                        <li>Backup richtig machen – damit nichts schief geht</li>
+                        <li>Wie erkennst Du Phishing/Scams?</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 3: Dein erster Krypto-Kauf</h3>
+                    <p>Jetzt geht's los – wir kaufen gemeinsam deine ersten Kryptos:</p>
+                    <ul>
+                        <li>Verschiedene Kaufmöglichkeiten kennenlernen</li>
+                        <li>Gemeinsam den ersten Kauf durchführen</li>
+                        <li>Tokens empfangen und senden</li>
+                        <li>Token tauschen und zwischen Blockchains wechseln (Bridging)</li>
+                        <li>Sicherheitsaspekte verstehen</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 4: Sicherheit mit Cold Wallet</h3>
+                    <p>Deine Kryptos langfristig und sicher aufbewahren:</p>
+                    <ul>
+                        <li>Verstehen, warum Cold Wallets wichtig sind</li>
+                        <li>Wann nutze ich was? Hot vs. Cold im Alltag</li>
+                        <li>Optional:</li>
+                        <ul>
+                            <li>Cold Wallet einrichten</li>
+                            <li>Tokens von Hot zur Cold Wallet verschieben</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 5: Krypto im echten Leben nutzen</h3>
+                    <p>Von der Theorie in die Praxis – Krypto im Alltag einsetzen:</p>
+                    <ul>
+                        <li>Wie kannst Du Krypto im Alltag nutzen?</li>
+                        <li>Krypto zurück auf dein Bankkonto übertragen</li>
+                        <li>Einblick in Web3</li>
+                        <li>Was sind Smart Contracts?</li>
+                        <li>Deine offenen Fragen und individuelle Themen</li>
+                    </ul>
+                    <p>ZZum Schluss gibt’s ein paar kleine Praxisaufgaben – damit du dein Wissen gleich anwendest und siehst, wie sicher du schon bist.</p>
+                </div>
+            </div>
+
+            <div class="price-box">
+                <p style="font-size: 1.2em; color: #666; margin-bottom: 10px;">Mein Angebot für dich: <strong></strong>1:1 DeFi Coaching</strong></p>
+                <div class="price"><strong>Launch-Preis<br>CHF 777.–</strong></div>
+                <p style="font-size: 1.2em; color: #666; margin-bottom: 10px;"><strong>Gültig bis 15. Dezember 2025</strong></p>
+                <p class="price-note">5 persönliche Sessions à ca 90 Minuten<br>über 2-4 Wochen verteilt, flexibel nach deinem Tempo</p>
+                
+                <div class="included-list">
+                    <p style="font-weight: 600; margin-bottom: 15px; color: #8B7355;"></p>
+                    <p style="font-weight: 600; margin-bottom: 15px; color: #8B7355;"></p>
+                    <p style="font-weight: 600; margin-bottom: 15px; color: #8B7355;"><strong>✓ Im Preis enthalten:</strong></p>
+                    <ul style="list-style: none;">
+                        <li>✓ Individuelle 1:1-Begleitung per Video-Call</li>
+                        <li>✓ Screen-Sharing für gemeinsames Einrichten</li>
+                        <li>✓ Meine Sicherheits-Checkliste</li>
+                        <li>✓ Support auch zwischen den Sessions</li>
+                        <li>✓ Kein Zeitdruck – wir gehen in deinem Rhythmus</li>
+                    </ul>
+                </div>
+                
+                <p style="margin-top: 25px; font-size: 1em; color: #666;"Optional: Einzelne Folge-Sessions à CHF 120.–</p>
+            </div>
         </div>
         
         <!-- CALL TO ACTION -->
         <div class="call-section" id="call">
             <h2>Bereit für den ersten Schritt?</h2>
-            <p>Buche dir jetzt ein kostenloses Erstgespräch.<br>Wir schauen gemeinsam, wo du stehst und wie ich dich unterstützen kann.</p>
+            <p>Buche dir jetzt ein kostenloses 30-minütiges Erstgespräch.<br>Wir schauen gemeinsam, wo du stehst und wie ich dich unterstützen kann.</p>
             
             <form id="contactForm" action="https://formspree.io/f/xqaynybo" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="Dein Name" required>
                 <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
-                <input type="tel" name="phone" placeholder="Deine Telefonnummer (optional)">
-                <textarea name="message" rows="4" placeholder="Was möchtest du erreichen? Wo stehst du gerade?" required></textarea>
-                <button type="submit" id="submitBtn">Jetzt Erstgespräch anfragen</button>
+                <textarea name="message" rows="4" placeholder="Erzähl mir kurz: Was möchtest du erreichen? Wo stehst du gerade mit Krypto? Hast du bereits erste Erfahrungen?
+Bitte mach mir doch gleich 2-3 Terminvorschläge 
+(Mo-Fr von 9-20 Uhr. Sa/So auf Anfrage)." required></textarea>
+                <input type="hidden" name="_subject" value="Neue Anfrage: 1:1 Begleitung Krypto/DeFi">
+                <button type="submit" id="submitBtn">Jetzt kostenloses Erstgespräch anfragen</button>
             </form>
-        </div>
+        </div>        
         
         <!-- SOCIAL MEDIA -->
         <div class="social-section">
-            <p style="color: #555; margin-bottom: 15px; font-size: 1.1em;">Folge mir auf Social Media für mehr Einblicke in DeFi und finanzielle Freiheit:</p>
+            <p style="color: #555; margin-bottom: 15px; font-size: 1.1em;">Folge mir auf Social Media für mehr Einblicke in DeFi und finanzielle Selbstbestimmung:</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/chris.freiheit/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -391,28 +599,10 @@
                 </a>
             </div>
         </div>
-        
-        <!-- BONUS PDFs -->
-        <div class="section" style="background: #f9f9f9; padding: 50px 40px;">
-            <h2 style="text-align: center; margin-bottom: 20px;">PS: Starte schon jetzt!</h2>
-            <p style="text-align: center; font-size: 1.1em; margin-bottom: 35px;">Lade dir meine kostenlosen Guides herunter und mache deine ersten Schritte in die DeFi-Welt:</p>
-            
-            <div style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
-                <div style="background: white; padding: 20px 25px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: all 0.3s;">
-                    <span style="font-size: 1.1em; font-weight: 600; color: #333;">📋 Checkliste für Wallet-Eröffnung</span>
-                    <a href="pdfs/checkliste-wallet.pdf" style="background: #8B7355; color: white; padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s;" download>Download</a>
-                </div>
-                
-                <div style="background: white; padding: 20px 25px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: all 0.3s;">
-                    <span style="font-size: 1.1em; font-weight: 600; color: #333;">🔐 Sicherungs-Blatt für Seedphrase</span>
-                    <a href="pdfs/sicherung-seedphrase.pdf" style="background: #8B7355; color: white; padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s;" download>Download</a>
-                </div>
-            </div>
-        </div>
-        
+
         <!-- FOOTER -->
         <div class="footer">
-            <p style="font-size: 1.1em; color: #8B7355; font-weight: 600;">Finanzielle Freiheit beginnt mit dem ersten Schritt.<br>Let's go free! 🚀</p>
+            <p style="font-size: 1.1em; color: #8B7355; font-weight: 600;">Finanzielle Selbstbestimmung beginnt mit dem ersten Schritt.<br>Let's go free! 🚀</p>
             
             <div class="disclaimer">
                 <p><strong>⚠️ Wichtiger Hinweis:</strong></p>
@@ -453,5 +643,8 @@
             });
         });
     </script>
+    <!-- <div class="social-section">-->
+    </div>
+
 </body>
 </html>
