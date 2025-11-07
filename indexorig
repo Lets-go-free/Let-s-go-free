@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's go free - Freiheit mit DeFi und Krypto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #8B7355 0%, #A0826D 50%, #C9A882 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .profile-image {
+            width: 270px;
+            height: 270px;
+            border-radius: 50%;
+            margin: 30px auto;
+            display: block;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            object-fit: cover;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #8B7355;
+            padding: 18px 45px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .section {
+            padding: 40px 40px;
+        }
+        
+        .section h2 {
+            font-size: 2em;
+            line-height: 1.2em;
+            color: #8B7355;
+            margin-bottom: 30px;
+        }
+        
+        .section p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .section pbox {
+            font-size: 1.em;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .problems-grid, .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            background: #F5E6D3;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #A0826D;
+        }
+        
+        .card h3 {
+            color: #8B7355;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        
+        .card h4 {
+            color: #8B7355;
+            margin-bottom: 10px;
+            font-size: 1.0em;
+        }
+        
+        .card p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+                .card pbox {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .highlight-box {
+            background: #F5E6D3;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #8B7355;
+        }
+        
+        .highlight-box strong {
+            color: #8B7355;
+            font-size: 1.15em;
+        }
+        
+        /* NEU: Kursangebot Styles */
+        .offer-section {
+            background: linear-gradient(135deg, #F5E6D3 0%, #E8D4BA 100%);
+            padding: 60px 40px;
+        }
+        
+        .offer-section h2 {
+            text-align: center;
+            font-size: 2.3em;
+            margin-bottom: 15px;
+        }
+        
+        .offer-tagline {
+            text-align: center;
+            font-size: 1.3em;
+            color: #6B5745;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        .sessions-container {
+            max-width: 750px;
+            margin: 40px auto;
+        }
+        
+        .session-card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            border-left: 5px solid #8B7355;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .session-card h3 {
+            color: #8B7355;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        
+        .session-card h4 {
+            color: #8B7355;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .session-card ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .session-card li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .price-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 600px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+        
+        .price-box .price {
+            font-size: 3em;
+            line-height: 1.2em;
+            color: #8B7355;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .price-box .price-note {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .included-list {
+            text-align: left;
+            margin: 25px auto;
+            max-width: 450px;
+        }
+        
+        .included-list li {
+            margin-bottom: 12px;
+            padding-left: 10px;
+        }
+        
+        .call-section {
+            background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .call-section h2 {
+            color: white;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        
+        .call-section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+        
+        .contact-form button {
+            width: 100%;
+            background: white;
+            color: #8B7355;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .contact-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .social-section {
+            padding: 40px;
+            text-align: center;
+            background: #f9f9f9;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #8B7355;
+            border-radius: 50%;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background: #6B5745;
+            transform: translateY(-5px);
+        }
+        
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        
+        .footer {
+            padding: 40px;
+            text-align: center;
+            background: #f5f5f5;
+        }
+        
+        .disclaimer {
+            max-width: 700px;
+            margin: 30px auto 0;
+            padding: 25px;
+            background: #fff3cd;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            text-align: left;
+            font-size: 0.95em;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .section {
+                padding: 40px 25px;
+            }
+            
+            .section h2 {
+                font-size: 1.6em;
+            }
+            
+            .problems-grid, .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .price-box .price {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <h1>Let's go free<br>Freiheit mit DeFi und Krypto</h1>
+            <p class="subtitle">Dein Weg in die finanzielle Selbstbestimmung</p>
+            <img src="profil.jpg" alt="Chris - Dein Begleiter in die DeFi-Welt" class="profile-image">
+            <a href="#angebot" class="cta-button">Zum 1:1 Begleitungs-Programm</a>
+        </div>
+        
+        <!-- DEINE GESCHICHTE -->
+        <div class="section">
+            <h2>Meine Geschichte</h2>
+            
+            <p>Hallo, schön, dass du hier bist.<br>Vielleicht suchst du – so wie ich damals – nach einem Weg, mehr Freiheit, Selbstbestimmung und Unabhängigkeit in dein Leben zu bringen.</p>
+            <p>Ich bin Chris, Jahrgang 1973, und habe über 25 Jahre als Applikationsmanager gearbeitet. Im Sommer 2023 stand ich an einem Punkt, an dem ich spürte: So kann es nicht weitergehen. Das Hamsterrad drehte sich immer schneller – sicherer Job, gutes Gehalt, aber keine echte Freiheit. Mir fehlte das Gefühl, mein Leben wirklich selbst zu gestalten.</p>
+
+            <p>Dann wurde meine Frau durch eine gute Freundin auf das Thema Krypto aufmerksam - und somit traten Krypto und dezentrale Finanzen auch in mein Leben. Anfangs war ich sehr skeptisch – das klang nach etwas für Nerds und Insider. Doch je mehr ich mich damit beschäftigte, desto klarer wurde mir: Hier steckt eine echte Chance. Eine Chance, das Finanzsystem zu verstehen, Kontrolle zurückzugewinnen und die eigene Zukunft selbst in die Hand zu nehmen.</p>
+
+            <!-- DIE PROBLEME -->
+            <div class="section" style="background: #ededed;">
+                <h3>Das Problem mit dem klassischen System</h3>
+                <pbox>Kommt dir das bekannt vor?</pbox>
+                
+                <div class="problems-grid">
+                    <div class="card">
+                        <h4>🏦 Fremdbestimmung</h4>
+                        <pbox>Du hast zwar Geld auf der Bank, aber keine Kontrolle darüber, was damit passiert. Gebühren, Sperren, Öffnungszeiten, willkürliche Regeln – andere entscheiden, was du darfst.</pbox>
+                    </div>
+                    
+                    <div class="card">
+                        <h4>💸 Inflation und Geldentwertung</h4>
+                        <pbox>Dein Geld verliert jedes Jahr an Kaufkraft. Sparen auf dem Konto fühlt sich sicher an, ist es aber nicht.</pbox>
+                    </div>
+    
+                    <div class="card">
+                        <h4>⏳ Langsame und teure Prozesse</h4>
+                        <pbox>Überweisungen dauern oft Tage, Auslands-Transaktionen kosten extra und Zwischenstellen kassieren mit.</pbox>
+                    </div>
+                
+                </div>
+            </div>
+
+
+        <!-- DIE LÖSUNG -->
+        <div class="section" style="background: #f2f2f2;">
+            <h3>Die Lösung: DeFi & Selbstbestimmung</h3>
+            <pbox>Dezentrale Finanzen bieten dir eine echte Alternative:</pbox>
+            
+            <div class="solutions-grid">
+                <div class="card">
+                    <h4>✅ Deine Bank, deine Regeln</h4>
+                    <pbox>Kontrolle statt Abhängigkeit: In DeFi verwaltest du dein Geld selbst. Du bist dein eigener Finanzverwalter – unabhängig von Banken oder Öffnungszeiten.</pbox>
+                </div>
+                
+                <div class="card">
+                    <h4>✅ Werte statt Verlust</h4>
+                    <pbox>In DeFi kannst du dein Geld gezielt einsetzen, um es zu erhalten oder zu vermehren – ohne dass es durch Inflation ständig weniger wert wird.</pbox>
+                </div>
+
+                <div class="card">
+                    <h4>✅ Schnell und direkt</h4>
+                    <pbox>DeFi funktioniert rund um die Uhr – Transaktionen sind in Minuten erledigt, ohne Umwege oder Zusatzgebühren.</pbox>
+                </div>
+
+            </div>
+        </div>
+
+            
+            <p>Ich begann Schritt für Schritt – öffnete mein erstes Wallet, lernte, wie man Fiat in Krypto tauscht, swappt, bridged und auch wieder zurück in Fiat wechselt. Ich machte Fehler, lernte daraus und baute mir Wissen auf, das nicht nur theoretisch, sondern praxisnah und sicher funktioniert – inklusive Cold Wallet und Risikomanagement.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Und genau deshalb habe ich mein 1:1-Coaching entwickelt</strong></p>
+                <p style="margin-top: 15px;">Ich begleite dich persönlich und Schritt für Schritt in die Krypto-Welt – von den Grundlagen bis zur sicheren Anwendung in der Praxis.<br>Statt endloser Videos bekommst du klare Antworten, echte Erfahrung und individuelle Unterstützung von A bis Z – damit du Krypto wirklich verstehst und selbstbewusst handeln kannst. Wir gehen gemeinsam deinen Weg, Schritt für Schritt, in deinem Tempo. Keine Hektik, kein Druck – du bestimmst das Tempo, ich begleite dich.</p>
+                <p style="margin-top: 15px;">Ich zeige dir praxisnah, wie du dein Geld sicher von der Bank auf die Blockchain bringst, wie du Risiken erkennst und wie du DeFi wirklich verstehst, statt nur nachzumachen. Dabei ist mir wichtig, dass du dich sicher fühlst und Vertrauen in jeden Schritt hast.</p>
+                <p style="margin-top: 15px;">Mein Ziel ist, dass du am Ende selbstbewusst und selbstbestimmt mit deinem Geld umgehst – mit einem klaren Verständnis, echten Ergebnissen und dem guten Gefühl, die Kontrolle wieder in der eigenen Hand zu haben.</p>
+                <p style="margin-top: 15px;"><strong>Wir gehen diesen Weg gemeinsam – in deinem Rhythmus, ohne Druck.</strong></p>
+            </div>
+            
+        </div>
+        
+       
+<!-- WIE ICH DIR HELFE 
+        <div class="section" style="background: #f9f9f9;" id="angebot">
+            <h2>Dein leichter Einstieg in die Krypto-Welt -<br>so begleite ich Dich</h2>
+            <p><strong>Ich begleite dich Schritt für Schritt in die dezentralen Finanzen – von A bis Z und darüber hinaus.</strong></p>
+            
+            <p>Ich weiss, wie unsicher und überfordernd der Einstieg in die Welt von Krypto und DeFi wirken kann. Genau so ging es mir am Anfang auch. Überall findest du Videos, Begriffe und Meinungen – aber kaum jemanden, der dich persönlich begleitet und dir die Dinge <strong>einfach und verständlich</strong> erklärt.</p>
+            
+            <p>Deshalb habe ich mein 1:1-Coaching entwickelt. Wir gehen gemeinsam deinen Weg, Schritt für Schritt, in deinem Tempo. Keine Hektik, kein Druck – du bestimmst das Tempo, ich begleite dich.</p>
+            
+            <p>Ich zeige dir praxisnah, wie du dein Geld sicher von der Bank auf die Blockchain bringst, wie du Risiken erkennst und wie du DeFi wirklich verstehst, statt nur nachzumachen. Dabei ist mir wichtig, dass du dich sicher fühlst und Vertrauen in jeden Schritt hast.</p>
+
+            <p>Mein Ziel ist, dass du am Ende selbstbewusst und selbstbestimmt mit deinem Geld umgehst – mit einem klaren Verständnis, echten Ergebnissen und dem guten Gefühl, die Kontrolle wieder in der eigenen Hand zu haben.</p>
+            
+            <p><strong>Wir gehen diesen Weg gemeinsam – in deinem Rhythmus, ohne Druck.</strong></p>
+        </div>
+-->
+        <!-- KURSANGEBOT -->
+        <div class="offer-section" id="angebot">
+            <h2>Persönliche 1:1-Begleitung in 5 Sessions</h2>
+            <p class="offer-tagline">Von den ersten Schritten bis zur selbstständigen Nutzung<br>Ich begleite dich Schritt für Schritt in die dezentralen Finanzen –<br>von A bis Z und darüber hinaus.</p>
+            <div class="sessions-container">
+                <div class="session-card">
+                    <h3>Session 1: Das Fundament verstehen</h3>
+                    <p>Wir schaffen gemeinsam die Basis, damit du weisst, womit du arbeitest:</p>
+                    <ul>
+                        <li>Was ist Krypto und wie funktioniert Blockchain?</li>
+                        <li>Unterschied zu klassischem Geld (Fiat)</li>
+                        <li>Warum gibt es verschiedene Blockchains?</li>
+                        <li>Was sind dezentrale Börsen und warum Gebühren?</li>
+                        <li>Unterschied zwischen Coin und Token</li>
+                        <li>Wo holst Du Dir die wichtigsten Informationen</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 2: Dein Wallet einrichten (Das Herzstück!)</h3>
+                    <p>Hier wird es praktisch – wir richten gemeinsam dein erstes Wallet ein:</p>
+                    <ul>
+                        <li>Was ist ein Wallet und warum brauchst du es?</li>
+                        <li>Unterschied zwischen Hot und Cold Wallet</li>
+                        <li>Gemeinsam ein Wallet eröffnen – Schritt für Schritt</li>
+                        <li>Sicherheit: Meine bewährte Checkliste durchgehen</li>
+                        <li>Backup richtig machen – damit nichts schief geht</li>
+                        <li>Wie erkennst Du Phishing/Scams?</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 3: Dein erster Krypto-Kauf</h3>
+                    <p>Jetzt geht's los – wir kaufen gemeinsam deine ersten Kryptos:</p>
+                    <ul>
+                        <li>Verschiedene Kaufmöglichkeiten kennenlernen</li>
+                        <li>Gemeinsam den ersten Kauf durchführen</li>
+                        <li>Tokens empfangen und senden</li>
+                        <li>Token tauschen und zwischen Blockchains wechseln (Bridging)</li>
+                        <li>Sicherheitsaspekte verstehen</li>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 4: Sicherheit mit Cold Wallet</h3>
+                    <p>Deine Kryptos langfristig und sicher aufbewahren:</p>
+                    <ul>
+                        <li>Verstehen, warum Cold Wallets wichtig sind</li>
+                        <li>Wann nutze ich was? Hot vs. Cold im Alltag</li>
+                        <li>Optional:</li>
+                        <ul>
+                            <li>Cold Wallet einrichten</li>
+                            <li>Tokens von Hot zur Cold Wallet verschieben</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="session-card">
+                    <h3>Session 5: Krypto im echten Leben nutzen</h3>
+                    <p>Von der Theorie in die Praxis – Krypto im Alltag einsetzen:</p>
+                    <ul>
+                        <li>Wie kannst Du Krypto im Alltag nutzen?</li>
+                        <li>Krypto zurück auf dein Bankkonto übertragen</li>
+                        <li>Einblick in Web3</li>
+                        <li>Was sind Smart Contracts?</li>
+                        <li>Deine offenen Fragen und individuelle Themen</li>
+                    </ul>
+                    <p>ZZum Schluss gibt’s ein paar kleine Praxisaufgaben – damit du dein Wissen gleich anwendest und siehst, wie sicher du schon bist.</p>
+                </div>
+            </div>
+
+            <div class="price-box">
+                <p style="font-size: 1.2em; color: #666; margin-bottom: 10px;">Mein Angebot für dich: <strong></strong>1:1 DeFi Coaching</strong></p>
+                <div class="price"><strong>Launch-Preis<br>CHF 777.–</strong></div>
+                <p style="font-size: 1.2em; color: #666; margin-bottom: 10px;"><strong>Gültig bis 15. Dezember 2025</strong></p>
+                <p class="price-note">5 persönliche Sessions à ca 90 Minuten<br>über 2-4 Wochen verteilt, flexibel nach deinem Tempo</p>
+                
+                <div class="included-list">
+                    <p style="font-weight: 600; margin-bottom: 15px; color: #8B7355;"></p>
+                    <p style="font-weight: 600; margin-bottom: 15px; color: #8B7355;"></p>
+                    <p style="font-weight: 600; margin-bottom: 15px; color: #8B7355;"><strong>✓ Im Preis enthalten:</strong></p>
+                    <ul style="list-style: none;">
+                        <li>✓ Individuelle 1:1-Begleitung per Video-Call</li>
+                        <li>✓ Screen-Sharing für gemeinsames Einrichten</li>
+                        <li>✓ Meine Sicherheits-Checkliste</li>
+                        <li>✓ Support auch zwischen den Sessions</li>
+                        <li>✓ Kein Zeitdruck – wir gehen in deinem Rhythmus</li>
+                    </ul>
+                </div>
+                
+                <p style="margin-top: 25px; font-size: 1em; color: #666;"Optional: Einzelne Folge-Sessions à CHF 120.–</p>
+            </div>
+        </div>
+        
+        <!-- CALL TO ACTION -->
+        <div class="call-section" id="call">
+            <h2>Bereit für den ersten Schritt?</h2>
+            <p>Buche dir jetzt ein kostenloses 30-minütiges Erstgespräch.<br>Wir schauen gemeinsam, wo du stehst und wie ich dich unterstützen kann.</p>
+            
+            <form id="contactForm" action="https://formspree.io/f/xqaynybo" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Dein Name" required>
+                <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+                <textarea name="message" rows="4" placeholder="Erzähl mir kurz: Was möchtest du erreichen? Wo stehst du gerade mit Krypto? Hast du bereits erste Erfahrungen?
+Bitte mach mir doch gleich 2-3 Terminvorschläge 
+(Mo-Fr von 9-20 Uhr. Sa/So auf Anfrage)." required></textarea>
+                <input type="hidden" name="_subject" value="Neue Anfrage: 1:1 Begleitung Krypto/DeFi">
+                <button type="submit" id="submitBtn">Jetzt kostenloses Erstgespräch anfragen</button>
+            </form>
+        </div>        
+        
+        <!-- SOCIAL MEDIA -->
+        <div class="social-section">
+            <p style="color: #555; margin-bottom: 15px; font-size: 1.1em;">Folge mir auf Social Media für mehr Einblicke in DeFi und finanzielle Selbstbestimmung:</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/chris.freiheit/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100008222589751" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p style="font-size: 1.1em; color: #8B7355; font-weight: 600;">Finanzielle Selbstbestimmung beginnt mit dem ersten Schritt.<br>Let's go free! 🚀</p>
+            
+            <div class="disclaimer">
+                <p><strong>⚠️ Wichtiger Hinweis:</strong></p>
+                <p style="margin-top: 10px;">Die Inhalte auf dieser Seite stellen keine Finanzberatung dar. Ich teile lediglich meine persönlichen Erfahrungen und begleite dich beim Erlernen dezentraler Finanzsysteme. Alle Investitionsentscheidungen triffst du eigenverantwortlich. Informiere dich umfassend und investiere nur, was du bereit bist zu verlieren.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const originalBtnText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Wird gesendet...';
+            submitBtn.disabled = true;
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = 'https://lets-go-free.github.io/home/danke.html';
+                } else {
+                    alert('Ups! Es gab ein Problem beim Senden. Bitte versuche es erneut.');
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            }).catch(error => {
+                alert('Ups! Es gab ein Problem beim Senden. Bitte versuche es erneut.');
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+    <div class="social-section">
+    </div>
+
+</body>
+</html>
