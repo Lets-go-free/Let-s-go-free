@@ -661,39 +661,51 @@ Bitte mach mir doch gleich 2-3 Terminvorschläge
         </div>
     </div>
     
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = e.target;
-            const submitBtn = document.getElementById('submitBtn');
-            const originalBtnText = submitBtn.textContent;
-            
-            submitBtn.textContent = 'Wird gesendet...';
-            submitBtn.disabled = true;
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    window.location.href = 'https://lets-go-free.github.io/home/danke.html';
-                } else {
-                    alert('Ups! Es gab ein Problem beim Senden. Bitte versuche es erneut.');
-                    submitBtn.textContent = originalBtnText;
-                    submitBtn.disabled = false;
-                }
-            }).catch(error => {
-                alert('Ups! Es gab ein Problem beim Senden. Bitte versuche es erneut.');
-                submitBtn.textContent = originalBtnText;
-                submitBtn.disabled = false;
-            });
-        });
-    </script>
-    <!-- <div class="social-section">-->
+<script>
+  // IDs oder Klassen deiner Formulare
+  const formIDs = ['contactForm', 'followUpForm']; // einfach hier weitere IDs ergänzen
+  
+  formIDs.forEach(id => {
+    const form = document.getElementById(id);
+    if (!form) return; // falls ein Formular nicht existiert
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.textContent : '';
+      
+      if (submitBtn) {
+        submitBtn.textContent = 'Wird gesendet...';
+        submitBtn.disabled = true;
+      }
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          window.location.href = 'https://lets-go-free.github.io/home/danke.html';
+        } else {
+          alert('Ups! Es gab ein Problem beim Senden. Bitte versuche es erneut.');
+          if (submitBtn) {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+          }
+        }
+      }).catch(error => {
+        alert('Ups! Es gab ein Problem beim Senden. Bitte versuche es erneut.');
+        if (submitBtn) {
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
+        }
+      });
+    });
+  });
+</script>    <!-- <div class="social-section">-->
     </div>
 
 </body>
